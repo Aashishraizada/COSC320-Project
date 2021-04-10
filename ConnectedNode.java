@@ -4,22 +4,22 @@ public class ConnectedNode implements Comparable<ConnectedNode> {
     
 	private int vertex, duration, wait, price, calc_weight, numStops;
 	
-    public ConnectedNode(int vertex, int arrival_time, int departure_time, int scheduled_departure_time, int price, int numstops) {
+    public ConnectedNode(int vertex, int arrival_time, int departure_time, int scheduled_departure_time, int price) {
 		super();
 		setVertex(vertex);
 		setDuration(Math.abs(arrival_time - departure_time));
 		setWait(Math.abs(scheduled_departure_time - departure_time));
 		setPrice(price);
 		setCalc_weight((int)((0.5 * (duration + wait)) + (0.5 * price)));
-		setNumStops(numstops);
+//		setNumStops(numstops);
     }
     
-    public ConnectedNode(int vertex, int duration, int wait, int price, int numStops) {
+    public ConnectedNode(int vertex, int duration, int wait, int price) {
     	setVertex(vertex);
     	setDuration(duration);
     	setWait(wait);
     	setPrice(price);
-		setNumStops(numStops);
+//		setNumStops(numStops);
     }
     
     public int getVertex() {
